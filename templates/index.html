@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowers Classifier</title>
+    <link rel = "stylesheet" href = "../static/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="../static/logo.png" type="image/gif">
+</head>
+<body>
+    <header>
+        Flowers Classifier
+    </header>
+
+    <div class="content">
+        <!-- <div class="result-box">
+            <div class="result">Flower predicted as: </div>
+            <div class="accuracy">Accuracy: </div>
+        </div> -->
+    
+        <form class="image-holder" action = "/predict" method="POST" enctype=multipart/form-data>
+            <div id = "img-flw" class = "image-holder-container">
+                <img id="myimg">
+                <label id = 'filelab'for="sample">Please choose an image of flower to predict</label>
+                <input id = "uploadBox" type="file" name="sample" accept=".jpeg, .jpeg, .png" onchange="getImg(this);">
+            </div>
+            <div class="button-box">
+                <button id= "predict-btn" type = "submit" disabled>Predict</button>
+                <!-- <button id="choose-another" type = "submit">Choose another Image</button> -->
+            </div>
+        </form>
+    </div>
+</body>
+<script src="../static/index.js"></script>
+</html>
